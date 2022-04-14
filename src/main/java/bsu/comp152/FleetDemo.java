@@ -14,7 +14,7 @@ package bsu.comp152;
  */
 public class FleetDemo {
 
-    public static final int CURRENT_YEAR = 2021;
+    public static final int CURRENT_YEAR = 2022;
 
     public static void main(String[] args) {
 
