@@ -35,7 +35,7 @@ public class VehicleDemo {
         System.out.printf("Car1 has more seats than car2: %b\n", car1.moreSeats(car2));
 
         // Call the Taxi constructor from the Taxi class.
-        var taxi1 = new Taxi("Toyota", "Highlander Hybrid", 2016,
+        Taxi taxi1 = new Taxi("Toyota", "Highlander Hybrid", 2016,
                 8, true, false, "A12345");
 
         System.out.println("Taxi 1 fareTotal: " + taxi1.getFareTotal());

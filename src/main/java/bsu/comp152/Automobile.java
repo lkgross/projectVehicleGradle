@@ -87,7 +87,7 @@ public class Automobile extends Vehicle {
      */
     @Override
     public String toString() {
-        return getMake() + " " + getModel() + " (" + numSeats + " seats)";
+        return getMake()+ " " + getModel() + " (" + numSeats + " seats)";
     }
     // What do you notice about method calls and instance variables in this
     // toString method?
