@@ -54,7 +54,7 @@ public class FleetDemo {
          */
 
         for (int i = 0; i < fleet.length; i++) {
-            // Implicitly call the toString method on the ith element of the fleet.
+            // Explicitly call the toString method on the ith element of the fleet.
             System.out.println(fleet[i].toString());
             /*
              * We can do this because the COMPILER checks for the DECLARED type
@@ -64,18 +64,18 @@ public class FleetDemo {
              * that is appropriate to the ACTUAL type of the object---
              * either from the class of the declared type Vehicle
              * or from the class of the actual type in which toString is overridden.
-             * This is known selection process is called dynamic binding.
+             * This selection process is called dynamic binding.
              * It can be done by the JVM, not by the compiler.
              */
 
             /*
-             * System.out.println(fleet[0]); # invokes the toString method in Automobile, which overrides
+             * System.out.println(fleet[0]); // invokes the toString method in Automobile, which overrides
              * the toString method in Vehicle.
-             * System.out.println(fleet[1]); # invokes the toString method in Vehicle,
+             * System.out.println(fleet[1]); // invokes the toString method in Vehicle,
              * which is inherited by Motorcycle.  (Motorcycle does not define its own toString method.)
-             * System.out.println(fleet[2]); # invokes the toString method in TractorTrailer, which overrides
+             * System.out.println(fleet[2]); // invokes the toString method in TractorTrailer, which overrides
              * the toString method in Truck, which overrides the toString method in Vehicle.
-             * System.out.println(fleet[3]); # invokes the toString method in Taxi, which overrides
+             * System.out.println(fleet[3]); // invokes the toString method in Taxi, which overrides
              * the toString method in Automobile, which overrides the toString method in Vehicle.
              */
         }
@@ -118,10 +118,9 @@ public class FleetDemo {
         System.out.println(t2.getNumAxles());
     }
 
-    /*
+    /**
      * A method to determine the average age of the vehicles in the fleet
      */
-
     public static void averageAge(Vehicle[] vehicleArray) {
         int totalAge = 0;
         for (int i = 0; i < vehicleArray.length; i++) {
